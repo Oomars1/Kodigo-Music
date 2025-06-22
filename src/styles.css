@@ -1,6 +1,5 @@
 html, body, #root {
   height: 100%;
-  
   background-color: #000;
   color: white; /* opcional: texto blanco */
   font-family: sans-serif;
