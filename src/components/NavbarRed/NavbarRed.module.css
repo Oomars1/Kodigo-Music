@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background: red;
+  color: white;
+  padding-left: 3rem;
+  padding-right: 1rem;
+}
+
+
+.Link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    text-align: center;
+    background: red;
+    color: white;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .Link {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+  }
+
+
+}
