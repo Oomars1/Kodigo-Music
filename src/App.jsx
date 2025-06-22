@@ -4,6 +4,9 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Navbar from './components/Navbar/Navbar';
 import NavbarRed from './components/NavbarRed/NavbarRed';
+import './styles.css'
+
+
 // import Profile from './pages/Profile/Profile';
 export default function App() {
   return (
