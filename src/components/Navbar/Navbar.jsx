@@ -22,7 +22,7 @@ export default function Navbar() {
         Music
       </div>
       <Link
-        to="/iniciaSesion"
+        to="/IniciarSesion"
         className={`${styles.singin} ${isOpen ? styles.showSignin : ""}`}
       >
         Iniciar sesión

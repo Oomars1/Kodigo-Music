@@ -27,15 +27,19 @@ const novedades = [
 
   
 
-export function GridCarousel() {
+export function GridCarousel({
+  spaceData,
+  columnaVisible,
+  columnas
+}) {
   return (
     <Swiper
       modules={[Grid]}
-      spaceBetween={5}
+      spaceBetween={spaceData}
       width={500}
-      slidesPerView={2} // 1 columna visible por vez
+      slidesPerView={columnaVisible} // 1 columna visible por vez
       grid={{
-        rows: 4,
+        rows: columnas,
         fill: 'row' // 💡 Esto fuerza el scroll horizontal por columnas
       }}
       grabCursor={true}

@@ -1,0 +1,76 @@
+@media (max-width: 762px) {
+  .footer {
+    background-color: #48464658;
+    color: #eee;
+    padding: 2rem 1rem;
+    text-align: left;
+    font-family: sans-serif;
+    margin-top: 2rem;
+  }
+
+    b{
+  color: white;
+  }
+  .logoSection {
+    margin-bottom: 1rem;
+  }
+
+  span{
+  color: #ccc
+  }
+
+  .logo {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #00ffcc;
+  }
+
+  .linksSection {
+    display: flex;
+    justify-content: left;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+
+
+  .linksSection a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.7rem;
+  }
+
+  .linksSection a:hover {
+    text-decoration: underline;
+    color: #00ffcc;
+  }
+
+  .copyRight p {
+    font-size: 0.7rem;
+    color: #ccc;
+    margin: 0;
+  }
+
+  .linkRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    color: white;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .linkRow a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .linkRow a:hover {
+    text-decoration: underline;
+    color: #00ffcc;
+  }
+
+  
+}

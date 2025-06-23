@@ -3,4 +3,9 @@ html, body, #root {
   background-color: #000;
   color: white; /* opcional: texto blanco */
   font-family: sans-serif;
+  
+}
+
+main{
+    padding-left: 1.5rem;
 }
