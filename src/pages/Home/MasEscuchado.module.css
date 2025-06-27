@@ -1,3 +1,91 @@
+
+.carouselContainer {
+    padding: 0rem;
+  }
+
+  .miSlidePersonalizado {
+    flex-shrink: 0;
+    width: 15%;
+    margin-right: 10px !important;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+    margin-right: 1rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .imagenPrimero {
+    flex-direction: column;
+  }
+
+  .imagenDespues {
+    flex-direction: column-reverse;
+  }
+
+  .cardImg {
+    width: 225px;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+  }
+
+  .cardText {
+    
+    min-height: 60px;
+    text-align: left;
+  }
+
+  .cardText h4 {
+    margin: 0;
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+
+  .cardText p {
+    font-size: 1rem;
+    color: #ccc;
+    padding-right: 5px;
+    margin: 4px 0;
+  }
+
+  .cardText h3 {
+    font-size: 0.75rem;
+    color: #aaa;
+    margin-top: 3px;
+  }
+
+  .imgContainer {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    margin-top: 10px;
+  }
+
+  .overlayText {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.8rem;
+    text-align: left;
+    border-radius: 0 0 15px 15px;
+  }
+
+
 @media (max-width: 768px) {
   .carouselContainer {
     padding: 0rem;

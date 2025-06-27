@@ -1,29 +1,10 @@
-body {
-  margin: 0;
-}
-
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  background: red;
-  color: white;
-  padding-left: 3rem;
-  padding-right: 1rem;
+  display: none; /* Oculto en escritorio */
 }
 
-
-.Link {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-/* Responsive styles */
 @media (max-width: 768px) {
   .navbar {
-    display: flex;
+    display: flex; /* Se muestra en móviles */
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
@@ -32,12 +13,12 @@ body {
     color: white;
     padding-left: 3rem;
     padding-right: 3rem;
+    text-decoration: none;
   }
-
+  
   .Link {
     padding: 0.5rem 1rem;
     text-decoration: none;
+    color: white;
   }
-
-
 }

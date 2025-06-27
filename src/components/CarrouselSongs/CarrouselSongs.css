@@ -1,8 +1,67 @@
+.miSlidePersonalizado{
+  width: 450px !important;
+}
+.cuadro {
+  color: white;
+  width: 100%;
+  max-width: 450px !important;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 60px;
+  box-sizing: border-box;
+  text-align: left;
+  background-color: transparent; /* Por si usas fondo oscuro */
+  margin: 0 ;
+}
+
+.cuadro-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  width: calc(100% - 70px); /* para que no se pase del contenedor */
+}
+
+.text-content h4 {
+  font-size: 0.8rem;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-content p {
+  font-size: 0.7rem;
+  color: #ccc;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
 @media (max-width: 762px) {
+
+  .miSlidePersonalizado{
+  width: 180px !important;
+}
   .cuadro {
     
     color: white;
-    width: 150px;
+    width: 160px;
     border-radius: 8px;
     padding-top: 0.5rem;
     font-size: 0.75rem;
@@ -22,12 +81,12 @@
 
   .text-content h4 {
     margin-top: 10px;
-    margin-left: 15px;
+    margin-left: 0px;
     width: 160px;
   }
   .text-content p {
     margin-top: 0px;
-    margin-left: 15px;
+    margin-left: 0px;
     width: 160px;
   }
 
@@ -40,13 +99,13 @@
   }
 
   h4 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin: 0.2rem 0;
   }
 
   p,
   small {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     color: #ccc;
   }
 }
