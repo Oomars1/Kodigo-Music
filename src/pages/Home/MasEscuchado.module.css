@@ -100,7 +100,7 @@
   .card {
     display: flex;
     flex-direction: column;
-    background-color: black;
+    
     color: white;
     border-radius: 8px;
     overflow: hidden;
