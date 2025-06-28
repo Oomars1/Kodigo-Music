@@ -55,6 +55,7 @@ export default function LoginForm() {
           {isSubmitting ? 'Cargando...' : 'Iniciar Sesión'}
         </button>
         <Link to="/" className="forgot-link">¿Olvidaste tu contraseña?</Link>
+        <Link to="/NewAccount" className="forgot-link">¿No tienes Cuenta? Crea una Cuenta</Link>
       </form>
       
     </div>

@@ -9,18 +9,18 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import NavbarRed from "../../components/NavbarRed/NavbarRed";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faApple } from "@fortawesome/free-brands-svg-icons";
-import {
-  faHome,
-  faCompass,
-  faBook,
-  faRightToBracket,
-} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import Sidebar from "../../components/Sidebar/SideBar";
+// import { useEffect } from "react";
+// import { subirNovedades } from "../../subirNovedades";
 
 
 
 function Home() {
+  // useEffect(() => {
+  //   subirNovedades(); // 👈 Ejecuta solo una vez al entrar
+  // }, []);
+
   const masEscuchado = [
     {
       title:
@@ -191,41 +191,7 @@ function Home() {
       <NavbarRed />
       <main className={styles.home}>
         <section className={styles.todo}>
-          <section className={styles.barralateral}>
-            <div className={styles.logo}>
-              <FontAwesomeIcon icon={faApple} />
-              Music
-            </div>
-
-            {/* Buscador */}
-            <div className={styles.search}>
-              <input type="text" placeholder="Buscar..." />
-            </div>
-
-            {/* Navegación */}
-            <ul>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faHome} /> Inicio
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faCompass} /> Novedades
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={faBook} /> Radio
-                </a>
-              </li>
-            </ul>
-
-            {/* Botón login */}
-            <Link to="/IniciarSesion" className={styles.loginButton}>
-              <FontAwesomeIcon icon={faRightToBracket} /> Iniciar sesión
-            </Link>
-          </section>
+          <Sidebar />
           <section className={styles.contenido}>
             <section className={styles.divisor}>
               <h1>Novedades</h1>
