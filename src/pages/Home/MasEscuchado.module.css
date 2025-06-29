@@ -93,7 +93,7 @@
 
   .miSlidePersonalizado {
     flex-shrink: 0;
-    width: 55%;
+    width: 55% !important;
     margin-right: 10px !important;
   }
 
