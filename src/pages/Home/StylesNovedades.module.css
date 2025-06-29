@@ -4,7 +4,7 @@
 
 .miSlidePersonalizado {
   flex-shrink: 0;
-  width: 35%;
+  width: 35% !important;
   margin-right: 10px !important;
 }
 
