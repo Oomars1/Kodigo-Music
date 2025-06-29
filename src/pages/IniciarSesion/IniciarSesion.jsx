@@ -1,24 +1,39 @@
+// LoginForm.jsx
 import React from 'react';
 import { useLoginForm } from './UseLoginForm';
 import { useNavigate } from 'react-router-dom';
-import './IniciarSesion.css'; // Asegúrate de importar el CSS
+import './IniciarSesion.css';
 import { Link } from 'react-router-dom';
+import { collection, query, where, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase/firebaseConfig'; // Ajusta la ruta según tu estructura
 
 export default function LoginForm() {
   const { values, errors, handleChange, handleSubmit, isSubmitting } = useLoginForm();
   const navigate = useNavigate();
 
-  const onLogin = ({ email, password }) => {
-    const user = {
-      email: 'test@correo.com',
-      password: '123456',
-    };
+  // 🔽 Aquí está tu login con verificación desde Firestore
+  const onLogin = async ({ email, password }) => {
+    try {
+      const usuariosRef = collection(db, 'usuarios');
+      const q = query(
+        usuariosRef,
+        where('correo', '==', email),
+        where('contrasena', '==', password)
+      );
 
-    if (email === user.email && password === user.password) {
-      alert('Login exitoso');
-      navigate('/');
-    } else {
-      alert('Credenciales incorrectas');
+      const querySnapshot = await getDocs(q);
+
+      if (!querySnapshot.empty) {
+        const userData = querySnapshot.docs[0].data();
+        console.log("Usuario logueado:", userData);
+        alert('Login exitoso');
+        navigate('/');
+      } else {
+        alert('Credenciales incorrectas');
+      }
+    } catch (error) {
+      console.error('Error al iniciar sesión:', error);
+      alert('Ocurrió un error al verificar tus datos');
     }
   };
 
@@ -57,7 +72,6 @@ export default function LoginForm() {
         <Link to="/" className="forgot-link">¿Olvidaste tu contraseña?</Link>
         <Link to="/NewAccount" className="forgot-link">¿No tienes Cuenta? Crea una Cuenta</Link>
       </form>
-      
     </div>
   );
 }

@@ -3,15 +3,21 @@ import { useNewAccountForm } from './useNewAccountForm';
 import { useNavigate } from 'react-router-dom';
 import './NewAccount.css';
 import { Link } from 'react-router-dom';
+import { guardarUsuario } from '../../firebase/GuardarUsuarios'; // Asegúrate que la ruta esté correcta
+
 
 export default function NewAccount() {
   const { values, errors, handleChange, handleSubmit, isSubmitting } = useNewAccountForm();
   const navigate = useNavigate();
 
-  const onRegister = (data) => {
-    alert('Cuenta creada con éxito');
-    console.log(data);
-    navigate('/');
+  const onRegister = async (data) => {
+    try {
+      await guardarUsuario(data);
+      alert('Cuenta creada con éxito');
+      navigate('/');
+    } catch (error) {
+      alert('Error al crear la cuenta. Intenta de nuevo.');
+    }
   };
 
   return (
