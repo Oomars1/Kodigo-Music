@@ -3,20 +3,16 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAe0kXxQHBYjTGIZZCF4P-uM-SsFotPf0E",
-  authDomain: "kodigomusic-aacb2.firebaseapp.com",
-  projectId: "kodigomusic-aacb2",
-  storageBucket: "kodigomusic-aacb2.firebasestorage.app",
-  messagingSenderId: "253713632868",
-  appId: "1:253713632868:web:099b5422063c11c4825971",
-  measurementId: "G-4WCZYMM0F5"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId:import.meta.env.VITE_MESSAGING_SENDERID,
+  appId: import.meta.env.VITE_APPID,
+  measurementId: import.meta.env.VITE_MEASUREMENTID
 };
 
 // Initialize Firebase
